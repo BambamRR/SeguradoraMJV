@@ -2,14 +2,17 @@ package br.com.sonhoseguro.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Id;
+
 import br.com.sonhoseguro.model.Pessoa;
 
 public class Endereco {
-	private Pessoa idPessoa;
-	private Integer id;
-	private int numero;
-	private String cep, logadouro, bairro, cidade, uf;
 	
+	@Id
+	private Integer id;
+	private Pessoa idPessoa;
+	private Integer numero;
+	private String cep, logadouro, bairro, cidade, uf;
 	
 	
 	public Pessoa getIdPessoa() {
@@ -24,10 +27,10 @@ public class Endereco {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public int getNumero() {
+	public Integer getNumero() {
 		return numero;
 	}
-	public void setNumero(int numero) {
+	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
 	public String getCep() {
@@ -48,11 +51,11 @@ public class Endereco {
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	public String getLocalidade() {
+	public String getCidade() {
 		return cidade;
 	}
-	public void setLocalidade(String localidade) {
-		this.cidade = localidade;
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
 	public String getUf() {
 		return uf;
@@ -61,7 +64,13 @@ public class Endereco {
 		this.uf = uf;
 	}
 	
-			
+		
+	public String toString() {
+		return "Endereço ID [" + this.id + "]"  + "Endereço: " + this.logadouro + " N -"
+				+ this.numero + " " + this.bairro + " " + this.cidade + " - " + this.uf;
+		
+	}
+		
 	
 
 //	public void cadastroDeEndereco(Pessoa idPessoa, String cep, String logadouro, 
