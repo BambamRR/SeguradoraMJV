@@ -1,10 +1,11 @@
 
 package br.com.sonhoseguro.model;
 
-import java.util.Calendar;
+
+import java.util.Date;
 import java.util.GregorianCalendar;
 
-
+import br.com.sonhoseguro.apoliceecorrelatos.Cotacao;
 
 public class Pessoa {
 /**
@@ -18,7 +19,9 @@ public class Pessoa {
 	private Integer id;
 	private String cpfCnpj;
 	private String nome;
-	private Calendar dataDeNascCriacao;
+	private Date dataDeNascCriacao;
+	private Cotacao estipulante;
+	private Cotacao beneficiario;
 	
 	
 	
@@ -46,12 +49,28 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public Calendar getDataDeNascCriacao() {
+	public Date getDataDeNascCriacao() {
 		return dataDeNascCriacao;
 	}
 
-	public void setDataDeNascCriacao(Calendar dataDeNascCriacao) {
+	public void setDataDeNascCriacao(Date dataDeNascCriacao) {
 		this.dataDeNascCriacao = dataDeNascCriacao;
 	}
 
+	public Cotacao getEstipulante() {
+		return estipulante;
+	}
+
+	public void setEstipulante(Cotacao estipulante) {
+		this.estipulante = estipulante;
+	}
+
+	public Cotacao getBeneficiario() {
+		return beneficiario;
+	}
+
+	public void setBeneficiario(Cotacao beneficiario) {
+		this.beneficiario = beneficiario;
+	}
+	
 }

@@ -25,7 +25,7 @@ public class AutenticaUsuario {
 		if (this.login == login && this.password == password) {
 			System.out.println(" Seja bem vindo: " + this.login);
 		} else {
-			System.out.println("Login ou senha inv�lidos");
+			System.out.println("Login ou senha invalidos");
 		}
 	}
 

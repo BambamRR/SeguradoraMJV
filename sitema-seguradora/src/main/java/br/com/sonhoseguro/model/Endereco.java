@@ -1,68 +1,84 @@
 package br.com.sonhoseguro.model;
-import java.util.ArrayList;
-import java.util.List;
 
-import br.com.sonhoseguro.model.Pessoa;
+import javax.persistence.Entity;
 
+import org.springframework.cloud.openfeign.FeignClient;
+
+@Entity
+@FeignClient
 public class Endereco {
 	private Pessoa idPessoa;
 	private Integer id;
-	private int numero;
-	private String cep, logadouro, bairro, cidade, uf;
-	
-	
-	
+	private String numero;
+	private String cep, logradouro, bairro, localidade, uf;
+
 	public Pessoa getIdPessoa() {
 		return idPessoa;
 	}
+
 	public void setIdPessoa(Pessoa idPessoa) {
 		this.idPessoa = idPessoa;
 	}
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public int getNumero() {
+
+	public String getNumero() {
 		return numero;
 	}
-	public void setNumero(int numero) {
+
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
+
 	public String getCep() {
 		return cep;
 	}
+
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-	public String getLogadouro() {
-		return logadouro;
+
+	public String getLogradouro() {
+		return logradouro;
 	}
-	public void setLogadouro(String logadouro) {
-		this.logadouro = logadouro;
+
+	public void setLogradouro(String logadouro) {
+		this.logradouro = logadouro;
 	}
+
 	public String getBairro() {
 		return bairro;
 	}
+
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
+
 	public String getLocalidade() {
-		return cidade;
+		return localidade;
 	}
+
 	public void setLocalidade(String localidade) {
-		this.cidade = localidade;
+		this.localidade = localidade;
 	}
+
 	public String getUf() {
 		return uf;
 	}
+
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-	
-			
-	
+
+	public String toString() {
+		return "Endereco{" + "logradouro=" + logradouro + ", bairro=" + bairro + ", localidade=" + localidade + "}";
+	}
 
 //	public void cadastroDeEndereco(Pessoa idPessoa, String cep, String logadouro, 
 //			int numero, String bairro,String localidade, String uf) {
@@ -75,6 +91,5 @@ public class Endereco {
 //		this.uf = uf;
 //	
 //	}
-	
-	
+
 }
