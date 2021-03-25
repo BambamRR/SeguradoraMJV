@@ -1,11 +1,5 @@
 package br.com.sonhoseguro.model;
 
-import javax.persistence.Entity;
-
-import org.springframework.cloud.openfeign.FeignClient;
-
-@Entity
-@FeignClient
 public class Endereco {
 	private Pessoa idPessoa;
 	private Integer id;

@@ -1,14 +1,16 @@
-package br.com.sonhoseguro.apoliceecorrelatos.endosso;
+ package br.com.sonhoseguro.apoliceecorrelatos;
 
 import java.util.Date;
 
 public class Parcela {
-
+	
+	private Cotacao idCotacao;
 	private Integer id;
 	private Integer numero;
 	private Date dataVencimento;
 	private Double valor;
 	private boolean compensada;
+	
 
 	public Integer getId() {
 		return id;
@@ -50,4 +52,12 @@ public class Parcela {
 		this.compensada = compensada;
 	}
 
+	public Cotacao getIdParcela() {
+		return idCotacao;
+	}
+
+	public void setIdParcela(Cotacao idParcela) {
+		this.idCotacao = idParcela;
+	}
+	
 }

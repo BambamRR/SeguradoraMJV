@@ -1,9 +1,11 @@
 
 package br.com.sonhoseguro.apoliceecorrelatos;
 
+
+import br.com.sonhoseguro.endosso.Endosso;
+
 import java.util.Date;
 
-import br.com.sonhoseguro.model.Pessoa;
 import br.com.sonhoseguro.model.Pessoa;
 
 public class Cotacao {
@@ -13,7 +15,7 @@ public class Cotacao {
 //	Ap�lice (se a cota��o se tornou uma ap�lice v�lida), Ve�culo, Cadastro (estipulante), 
 //	Cadastro(benefici�rio), Endere�o (endere�o do benefici�rio), Ve�culo a Trabalho, 
 //	Pernoita Garagem.
-
+	private Endosso endossos;
 	private int id;
 	private Date inicioVigencia;
 	private boolean apolice;
@@ -25,6 +27,7 @@ public class Cotacao {
 	private Pessoa estipulanteId;
 	private boolean veiculoTrabalho;
 	private boolean veiculoPernoiteGaragem;
+	private Parcela idParcela;
 
 	public int getId() {
 		return id;
@@ -105,7 +108,7 @@ public class Cotacao {
 	public void setVeiculoPernoiteGaragem(boolean veiculoPernoiteGaragem) {
 		this.veiculoPernoiteGaragem = veiculoPernoiteGaragem;
 	}
-	
+
 	public boolean isApolice() {
 		return apolice;
 	}
@@ -114,4 +117,20 @@ public class Cotacao {
 		this.apolice = apolice;
 	}
 
+	public Endosso getEndossos() {
+		return endossos;
+	}
+
+	public void setEndossos(Endosso endossos) {
+		this.endossos = endossos;
+	}
+
+	public Parcela getIdParcela() {
+		return idParcela;
+	}
+
+	public void setIdParcela(Parcela idParcela) {
+		this.idParcela = idParcela;
+	}
+	
 }
